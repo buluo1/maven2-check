@@ -4,14 +4,14 @@ node {
 
     try {
         stage ('Clone') {
-            checkout scm
+            echo "clone phase"
         }
         stage ('Build') {
-            sh "echo 'hello.sh'"
+            echo "build phase"
         }
        
         stage ('Deploy') {
-            sh "echo 'hello.sh'"
+            echo "deploy phase'"
         }
     } catch (err) {
         currentBuild.result = 'FAILED'
